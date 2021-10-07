@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Utilities;
+using static UnityEngine.InputSystem.InputAction;
+
 public class Bird : MonoBehaviour
 {
     [SerializeField] float _launchForce = 500;
@@ -11,6 +14,7 @@ public class Bird : MonoBehaviour
     Vector2 _startPosition;
     Rigidbody2D _rigibody2D;
     SpriteRenderer _spriteRenderer;
+    PlayerControls _controls;
 
     void Awake()
     {
